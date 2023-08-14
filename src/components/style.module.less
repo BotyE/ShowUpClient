@@ -1,0 +1,171 @@
+
+@import "../styles/main.less";
+
+
+.button {
+    position: absolute;
+    min-width: 150px;
+    top: 50px;
+    right: 90px;
+    flex-shrink: 0;
+    height: 50px;
+    background-color: @twitch-color;
+    border: none;
+    font-family: @font-family;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 11px;
+    display: flex;
+    padding: 0px 15px 0px 10px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none!important;
+    outline: none;
+    text-decoration: none;
+
+    &:hover,&:focus,&:active, &:active:focus:not(:disabled):not(.disabled) {
+        box-shadow: none!important;
+        outline: none;
+        background-color: @twitch-color;
+
+        p {
+            color: @text-color;
+        }
+    }
+
+    p {
+        color: @text-color;
+    }
+
+    
+    .twitch {
+        width: 42px;
+        height: 42px;
+    }
+
+    .user {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+}
+
+.text {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    font-family: @font-family;
+    text-align: center;
+    font-size: 64px;
+    font-weight: 300;
+}
+
+.button_connect {
+    flex-shrink: 0;
+    height: 30px;
+    background-color: @twitch-color;
+    border: none;
+    font-family: @font-family;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 7px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none!important;
+    outline: none;
+    text-decoration: none;
+    color: @text-color;
+
+    &:hover,&:focus,&:active, &:active:focus:not(:disabled):not(.disabled) {
+        box-shadow: none!important;
+        outline: none;
+        background-color: @twitch-color;
+        color: @text-color;
+    }
+
+    span {
+        color: @text-color;
+    }
+
+    p {
+        color: @text-color;
+    }
+
+    
+    .twitch {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+
+.connect_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 15px;
+
+    p {
+        color: @text-color;
+        font-family: @font-family;
+        font-size: 20px;
+        font-weight: 500;
+        margin-right: 30px;
+    }
+
+    .buttons_bundle {
+        display: flex;
+    }
+}
+
+.user_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 15px;
+
+    p {
+        color: @text-color;
+        font-family: @font-family;
+        font-size: 20px;
+        font-weight: 500;
+        min-width: 150px;
+    
+    }
+
+    .buttons_bundle {
+        display: flex;
+    }
+}
+
+.admin_container {
+    padding-top: 120px;
+    margin-left: 100px;
+
+    .title {
+        color: @text-color;
+        font-family: @font-family;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}
+
+.lobby_container {
+    padding-top: 120px;
+    margin-left: 100px;
+
+    .title {
+        color: @text-color;
+        font-family: @font-family;
+        font-size: 25px;
+        font-weight: 700;
+    }
+}

@@ -8,9 +8,27 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <title>React App</title>
+    <title>Show UP</title>
   </head>
   <body>
+    <script>
+      less = {
+        env: "development",
+        logLevel: 2,
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: true,
+        globalVars: {
+          var1: '"quoted value"',
+          var2: 'regular value'
+        },
+        rootpath: ":/a.com/"
+      };
+    </script>
+    <script src="less.js"></script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>

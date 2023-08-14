@@ -2,7 +2,6 @@ import React, {useContext} from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom'
 import {publicRoutes} from "./routes";
 import {observer} from "mobx-react-lite";
-import AuthStore from './store/AuthStore';
 
 const AppRouter = observer(() => {
     return (

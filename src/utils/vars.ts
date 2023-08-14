@@ -1,0 +1,5 @@
+export const TWITCH_COLOR = '#9147FF'
+export const CONNECT_COLOR = '#138808'
+export const MANAGE_COLOR = '#1240AB'
+export const DELETE_COLOR = '#A60000'
+export const MODERATE_COLOR = '#602580'
