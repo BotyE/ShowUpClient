@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../styles/home.module.css"
 
 
-const Fake = () => {
+const Bunker = () => {
 
     return (
         <div className={styles.container}>
@@ -11,4 +11,4 @@ const Fake = () => {
     )
 }
 
-export default observer(Fake)
+export default observer(Bunker)

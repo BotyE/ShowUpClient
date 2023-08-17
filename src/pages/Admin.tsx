@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
 import styles from "./styles/home.module.css"
-import DefaultText from "../components/DefaultText";
-import ButtonUser from "../components/ButtonUser";
-import LobbyGames from "../components/LobbyGames";
-import AdminCanCreateGames from "../components/AdminCanCreateGames";
-import AdminManagmentGames from "../components/AdminManagmentGames";
+import DefaultText from "../components/default/DefaultText";
+import ButtonUser from "../components/common/ButtonUser";
+import LobbyGames from "../components/default/LobbyGames";
+import AdminCanCreateGames from "../components/admin/AdminCanCreateGames";
+import AdminManagmentGames from "../components/admin/AdminManagmentGames";
 
 
 const Admin = () => {

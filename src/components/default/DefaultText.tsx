@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
-import styles from "./style.module.css"
+import styles from "../style.module.css"
 
 
 const DefualtText = () => {

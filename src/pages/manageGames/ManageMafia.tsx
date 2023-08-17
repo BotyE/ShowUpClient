@@ -3,12 +3,14 @@ import React from "react";
 import styles from "../styles/home.module.css"
 
 
-const Fake = () => {
+const ManageMafia = () => {
 
     return (
         <div className={styles.container}>
+
+            1111
         </div>
     )
 }
 
-export default observer(Fake)
+export default observer(ManageMafia)

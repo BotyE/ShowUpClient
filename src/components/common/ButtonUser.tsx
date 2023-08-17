@@ -1,12 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, {useContext, useEffect, useState} from "react";
-import styles from "./style.module.css"
-import twitch from "../assets/twitch-icon.png"
+import styles from "../style.module.css"
+import twitch from "../../assets/twitch-icon.png"
 import { Button, Image } from "antd";
 import { useNavigate } from "react-router";
-import { HOME_ROUTE, LOBBY_ROUTE } from "../utils/consts";
-import { Context } from "..";
-import { takeImage } from "../http/userApi";
+import { HOME_ROUTE, LOBBY_ROUTE } from "../../utils/consts";
+import { Context } from "../..";
+import { takeImage } from "../../http/userApi";
 
 const ButtonUser = () => {
 

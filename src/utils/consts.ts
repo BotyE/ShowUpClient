@@ -3,6 +3,8 @@ export const LOBBY_ROUTE = '/lobby'
 export const SUPER_ADMIN_ROUTE = '/super-admin'
 export const ADMIN_ROUTE = '/admin'
 export const LOGIN_ROUTE = '/login'
+export const MANAGE_ROUTE = '/manage'
+export const MODERATE_ROUTE = '/moderate'
 
 
 //games

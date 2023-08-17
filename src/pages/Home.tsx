@@ -1,8 +1,8 @@
 import { observer } from "mobx-react-lite";
 import React, {useContext, useEffect} from "react";
-import ButtonLogin from "../components/ButtonLogin";
+import ButtonLogin from "../components/common/ButtonLogin";
 import styles from "./styles/home.module.css"
-import DefaultText from "../components/DefaultText";
+import DefaultText from "../components/default/DefaultText";
 import { Context } from "../index";
 import { useNavigate } from "react-router";
 import { LOBBY_ROUTE } from "../utils/consts";
