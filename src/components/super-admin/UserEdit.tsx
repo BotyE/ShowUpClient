@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { HOME_ROUTE } from "../../utils/consts";
 import ButtonTask from "../common/ButtonTask";
 import { DELETE_COLOR } from "../../utils/vars";
-import { IStreamer } from "../../interfaces/interfaces";
+import { IStreamer } from "../../utils/interfaces";
 import { Context } from "../..";
 
 interface UserEditIF {

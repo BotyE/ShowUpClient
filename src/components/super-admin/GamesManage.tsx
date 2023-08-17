@@ -4,7 +4,7 @@ import styles from "../style.module.css"
 import GameConnect from "../default/GameConnect";
 import GameManage from "./GameSuperAdmin";
 import { Context } from "../..";
-import { IGameAdmin } from "../../interfaces/interfaces";
+import { IGameAdmin } from "../../utils/interfaces";
 
 
 const GamesManage = () => {

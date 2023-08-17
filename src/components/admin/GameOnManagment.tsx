@@ -5,7 +5,7 @@ import ButtonTask from "../common/ButtonTask";
 import { useNavigate } from "react-router";
 import { HOME_ROUTE, MANAGE_ROUTE, MODERATE_ROUTE } from "../../utils/consts";
 import { CONNECT_COLOR, DELETE_COLOR, MANAGE_COLOR, MODERATE_COLOR } from "../../utils/vars";
-import { IGameConnect, IGameCreate } from "../../interfaces/interfaces";
+import { IGameConnect, IGameCreate } from "../../utils/interfaces";
 import { Context } from "../..";
 
 

@@ -5,7 +5,7 @@ import ButtonConnect from "../common/ButtonTask";
 import { useNavigate } from "react-router";
 import { HOME_ROUTE } from "../../utils/consts";
 import ButtonTask from "../common/ButtonTask";
-import { IGameCreate } from "../../interfaces/interfaces";
+import { IGameCreate } from "../../utils/interfaces";
 
 interface GameConnectIF {
     index: number,

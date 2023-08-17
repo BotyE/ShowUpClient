@@ -6,7 +6,7 @@ import UserEdit from "./UserEdit";
 import ButtonTask from "../common/ButtonTask";
 import { CONNECT_COLOR } from "../../utils/vars";
 import { Context } from "../..";
-import { IStreamer } from "../../interfaces/interfaces";
+import { IStreamer } from "../../utils/interfaces";
 
 
 const UsersManage = () => {

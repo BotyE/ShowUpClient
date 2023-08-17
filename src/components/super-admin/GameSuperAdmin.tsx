@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { HOME_ROUTE, SUPER_ADMIN_ROUTE } from "../../utils/consts";
 import ButtonTask from "../common/ButtonTask";
 import { MANAGE_COLOR } from "../../utils/vars";
-import { IGameAdmin } from "../../interfaces/interfaces";
+import { IGameAdmin } from "../../utils/interfaces";
 
 interface GameConnectIF {
     index: number,

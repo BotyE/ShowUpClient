@@ -5,7 +5,7 @@ import GameConnect from "../default/GameConnect";
 import GameCanCreate from "./GameCanCreate";
 import GameOnManagment from "./GameOnManagment";
 import { Context } from "../..";
-import { IGameCreate } from "../../interfaces/interfaces";
+import { IGameCreate } from "../../utils/interfaces";
 
 
 const AdminManagmentGames = () => {

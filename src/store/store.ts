@@ -1,6 +1,6 @@
 import {makeAutoObservable} from "mobx";
-import { IGameAdmin, IGameCreate, IStreamer } from "../interfaces/interfaces";
-import { GameType } from "../interfaces/enums";
+import { IGameAdmin, IGameCreate, IStreamer } from "../utils/interfaces";
+import { GameType } from "../utils/enums";
 import { v4 } from "uuid";
 
 export default class UserStore {

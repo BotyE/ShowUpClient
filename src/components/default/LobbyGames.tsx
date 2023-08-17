@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import styles from "../style.module.css"
 import GameConnect from "./GameConnect";
 import { Context } from "../..";
-import { IGameCreate } from "../../interfaces/interfaces";
+import { IGameCreate } from "../../utils/interfaces";
 
 
 const LobbyGames = () => {

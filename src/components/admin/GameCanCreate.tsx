@@ -5,7 +5,7 @@ import ButtonTask from "../common/ButtonTask";
 import { useNavigate } from "react-router";
 import { HOME_ROUTE } from "../../utils/consts";
 import { Context } from "../..";
-import { IGameCreate } from "../../interfaces/interfaces";
+import { IGameCreate } from "../../utils/interfaces";
 import { v4 } from "uuid"
 
 interface GameConnectIF {
