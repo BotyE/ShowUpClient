@@ -1,26 +1,30 @@
 import { observer } from "mobx-react-lite";
-import React, { useContext } from "react";
-import styles from "../style.module.css"
+import React, { useContext, useEffect } from "react";
+import styles from "./styles/games.module.css"
 import ramka from "../../assets/ramka.png"
 import { Image } from "antd";
+import { Context } from "../..";
 
 interface Player {
     login: string,
-    display_name: string
+    displayName: string,
+    profileImage: string
 }
 
 interface Play {
-    index: number,
-    user: Player
+    index: string,
+    userPlay: Player
+    
 }
 
-const MafiaCam = ({user, index}: Play) => {
+const MafiaCam = ({userPlay, index}: Play) => {
 
     return (
-        <div style={{position: "relative",width: "24%", aspectRatio: "16/9", margin: "10px 0px", backgroundColor: "white", height: "auto", display:"flex"}}>
-                            <video id={user.login} style={{position: "absolute", width: "100%", height: "100%"}} autoPlay></video> 
-                            <div style={{ width:"100%", height: "20%", position: "absolute", bottom: "0", backgroundColor: "rgba(0, 0, 0, 0.2)", display:"flex", justifyContent:"center", alignItems:"center"}}> 
-                                <p style={{fontFamily:"Monsterat"}}>{index+1}. {user.display_name}</p>
+        <div className={styles.camera_container}>
+                            <video id={userPlay.login} className={styles.video} autoPlay></video> 
+                            <div className={styles.bottom_field}> 
+                                <Image className={styles.profile_image} src={userPlay.profileImage} preview={false}/>
+                                <p>{index} {userPlay.displayName}</p>
                             </div>   
                             
                             <Image  style={{position: "relative", width: "101%", aspectRatio: "16/9"}}  src={ramka}  preview={false}/>                       

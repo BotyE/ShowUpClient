@@ -124,24 +124,39 @@
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCvC70w-.ttf) format('truetype');
 }
-.mafia_container {
+.camera_container {
+  position: relative;
+  width: 24%;
+  aspect-ratio: 16/9;
+  margin: 10px 0px;
+  background-image: url("../../../assets/offline.png");
+  background-size: cover;
+  background-color: lightblue;
+  height: auto;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+}
+.camera_container .video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.camera_container .bottom_field {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
   align-items: center;
-  background-color: #1E1E1E;
-  width: 100vw;
-  height: 100vh;
-  color: #FFFFFF;
 }
-.mafia_container .logo {
-  margin-top: 2vh;
-  width: 12vw;
+.camera_container .bottom_field p {
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 300;
 }
-.mafia_container .playground {
-  width: 95vw;
-  display: flex;
-  flex-wrap: wrap;
-  flex: 0 1 25%;
-  justify-content: space-evenly;
+.camera_container .bottom_field .profile_image {
+  width: 1.5vw;
+  margin-right: 15px;
+  border-radius: 10px;
 }

@@ -4,12 +4,14 @@ import styles from "./styles/mafia.module.css"
 import mafia from "../../assets/mafia.png"
 import {Image} from "antd"
 import { Context } from "../..";
-import { takeImage } from "../../http/userApi";
+import { getMafiaUsers, takeImage } from "../../http/userApi";
 import MafiaCam from "../../components/games/MafiaCam";
 
 interface Player {
     login: string,
-    display_name: string
+    displayName: string,
+    gameLead: boolean,
+    profileImage: string
 }
 
 
@@ -19,46 +21,72 @@ const Mafia = () => {
 
     const [wind, setWind] = useState<Array<Player>>([{
         login: "evelone192",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "dinablin",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "finargot",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "jesusavgn",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "welovegames",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "artistrng",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "general_hs_",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "keysie",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "botyep",
-        display_name: ""
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
-        login: "botshow",
-        display_name: ""
+        login: "mokrivskyi",
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
-        login: "Teynor",
-        display_name: ""
+        login: "teynor",
+        displayName: "",
+        gameLead: false,
+        profileImage: ""
         },{
         login: "evelone2004",
-        display_name: ""
+        displayName: "",
+        gameLead: true,
+        profileImage: ""
         } ])
+
     function streamCamVideo() {
         var constraints = { video: { width: 1920, height: 1080 } };
         navigator.mediaDevices
           .getUserMedia(constraints)
           .then(function(mediaStream) {
+            console.log(user.user.login)
             var video: HTMLVideoElement | null = document.querySelector("#"+user.user.login)
             if(video) {
             video.srcObject = mediaStream;
@@ -72,31 +100,20 @@ const Mafia = () => {
           }); // always check for errors at the end.
       }
 
-    useEffect( ()=> {
-        streamCamVideo()
 
-    },[user.user.login])
 
     useEffect( ()=> {
-        wind.map( async (elem) => {
-              await takeImage(elem.login).then((data) => {
-                console.log(data.data[0].login)
-                if(data) {
-                    const text = data.data[0]
-                    setWind( prev => [...prev.filter( (item) => item.login != elem.login), {
-                        login: text.login,
-                        display_name: text.display_name
-                    }])
-                    
-            }})  })
-
+        getMafiaUsers(wind).then( (users) => setWind(users)).then(() => streamCamVideo())
     },[])
 
     return (
         <div className={styles.mafia_container} >
             <Image className={styles.logo} src={mafia}  preview={false}/>
             <div className={styles.playground}>
-                {wind.map((elem, index) => <MafiaCam index={index} user={elem}/>)}
+                {wind.map((elem, index) => {
+                    let newIndex: string = (!elem.gameLead) ? index + 1 + "." : "Ведет игру -"
+                        return <MafiaCam index={newIndex} userPlay={elem}/>
+                    })}
             </div>
         </div>
     )

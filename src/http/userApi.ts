@@ -19,7 +19,7 @@ return user
 export const takeImage = async (login: string) => {
 
     const url = 'https://api.twitch.tv/helix/users?login='+login;
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("token");
     const response = await fetch(url, {
         headers: {
             "Client-Id": "vewaf736q0yj5q9nzxcrlutndj783o",
@@ -29,4 +29,31 @@ export const takeImage = async (login: string) => {
 
     const text = await response.json();
     return text;
+}
+
+export const getMafiaUsers = async (users: any) => {
+    const mafiaUsers: String[] = users.reduce( (arr: String[], user: any, index: number) => {
+        if( index === 0 ) return [user.login];
+        return [...arr, '&login=' + user.login];
+    }, [])
+
+    const loginList = mafiaUsers.join('');
+
+    const userList = await takeImage(loginList);
+    const usersData = userList.data;
+
+    return users.reduce( (arr: any, user: any, index: number) => {
+        let userData = usersData.find( (data: any) => data.login === user.login);
+
+        return [...arr, {
+            login: user.login,
+            displayName: (userData) ? userData.display_name : "Пустой слот",
+            gameLead: user.gameLead,
+            profileImage: (userData) ? userData.profile_image_url : ""
+        }]
+    }, [])
+
+
+
+
 }
